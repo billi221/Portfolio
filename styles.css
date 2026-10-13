@@ -17,3 +17,51 @@
 .portrait-frame{background:radial-gradient(ellipse at 50% 38%,#173d4d,#0a1422 75%);border:1px solid #5e9995;box-shadow:0 28px 90px #0008,0 0 0 10px #a5f0d10d,0 0 60px #2d9d8f1b}
 .portrait-frame img{object-position:50% 15%}
 @media(max-width:760px){.nav-resume{border-bottom:0;padding-bottom:12px}}
+
+/* Consistent compact labels, without changing heading hierarchy */
+.edu-tags span,.tags span{font-size:11px;line-height:1.5;font-weight:400}
+.metric-layout small{font-size:12px;line-height:1.5;font-weight:400}
+
+/* Mobile layout polish: compact spacing and comfortable tap targets */
+html { overflow-x: clip; }
+body { overflow-wrap: break-word; }
+@media (max-width: 760px) {
+  .shell { padding-inline: 22px; }
+  .hero { padding-block: 46px 42px; gap: 18px; }
+  .hero h1 { font-size: clamp(48px, 11vw, 78px); letter-spacing: -.045em; overflow-wrap: normal; }
+  .hero h2 { line-height: 1.5; }
+  .hero-lead { line-height: 1.7; }
+  .hero-meta { gap: 10px 14px; line-height: 1.5; }
+  .section { padding-block: 64px; }
+  .section h2 { letter-spacing: -.035em; line-height: 1.15; }
+  .section-heading { margin-bottom: 28px; }
+  .skill-card { min-height: 0; padding: 23px; }
+  .skill-card ul, .exp-main ul { line-height: 1.8; font-size: 14px; }
+  .exp-row { padding: 27px 0; }
+  .exp-main h3 { font-size: clamp(19px, 5vw, 24px); line-height: 1.3; }
+  .portrait-caption { letter-spacing: 1px; }
+  .btn, .nav a, .text-link { min-height: 44px; }
+  .nav { max-height: calc(100dvh - 68px); overflow-y: auto; }
+  .contact-inner { gap: 25px; }
+}
+@media (max-width: 480px) {
+  .shell { padding-inline: 18px; }
+  .hero h1 { font-size: clamp(43px, 11.2vw, 59px); }
+  .hero-actions, .contact-actions { flex-direction: column; }
+  .hero-actions .btn, .contact-actions .btn { width: 100%; flex: initial; justify-content: space-between; }
+  .hero-portrait { padding: 14px 9px 5px; }
+  .portrait-frame { width: min(83%, 300px); }
+  .section h2 { font-size: clamp(32px, 9vw, 42px); }
+  .contact-section h2 { font-size: clamp(36px, 10vw, 44px); }
+  .about-body .large-text { font-size: 18px; line-height: 1.65; }
+  .exp-row { grid-template-columns: 42px minmax(0, 1fr); gap: 12px; }
+  .exp-count { font-size: 20px; }
+  .exp-main ul { padding-left: 17px; }
+  .metric-layout>div { padding: 17px 11px; }
+  .metric-layout strong { font-size: 13px; line-height: 1.4; }
+  .project-body { padding: 20px; }
+  .project-body h3 { font-size: 20px; }
+  .project-body>p { min-height: 0; }
+  .education-card { padding: 21px; }
+  .footer-inner { gap: 12px; }
+}
